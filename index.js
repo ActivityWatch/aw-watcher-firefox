@@ -58,7 +58,7 @@ function save_tabs(tabs) {
     // TODO: Do something smart
     //ss.storage.tab_history[now.toISOString()] = tabs;
 
-    // Send to actwa-server
+    // Send to aw-server
     var event = {
         "tags": "firefox-watcher",
         "tabs": tabs,
@@ -78,7 +78,7 @@ function save_tabs(tabs) {
         "content": events,
         "contentType": "application/json",
         "onComplete": function(response) {
-            console.log("Completed request to actwa-server");
+            console.log("Completed request to aw-server");
         }
     })
     r.post();
